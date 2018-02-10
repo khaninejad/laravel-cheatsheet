@@ -15,5 +15,5 @@ laravel 5.5 cheatsheet
 
 **Create a model with migration**
 
-    php artisan make:model User
+    php artisan make:model User --migration
     php artisan make:model User -m
