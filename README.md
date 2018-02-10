@@ -1,4 +1,5 @@
 
+
 # laravel-cheatsheet
 laravel 5.5 cheatsheet
 
@@ -16,4 +17,10 @@ laravel 5.5 cheatsheet
 **Create a model with migration**
 
     php artisan make:model User --migration
-    php artisan make:model User -m
+    php artisan make:model Score -m
+**Filter collection with starts_with**
+
+    $form_data=collect(json_decode($request->form_data, true));
+    $exeption_color_types =  $form_data->filter(function ($item) {
+                return starts_with($item['name'], 'exeption_');
+    });
